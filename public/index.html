@@ -1,43 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <title>Todo with react</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <style>
+      #title {
+          text-align: center;
+          color: rgb(233, 218, 217);
+          font-size: 100px;
+          font-family: Poppins;
+      }
+  </style>
+  <div class="container col-5" id="main">
+      <p class="text-center" id="title">Todos</p>
+      <div class="input-group mb-3" id="new_task">
+          <button class="btn btn-outline-secondary" type="button" id="select_all_btn">Select all</button>
+          <input id="new_task_input_box" type="text" class="form-control" placeholder="What needs to be done?" aria-label="Example text with button addon" aria-describedby="button-addon1">
+        </div>
+  </div>
+  <div class="container col-5" id="task_list">
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+  </div>
+  <div class="container col-5" id="navbar">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container col-5">
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#" id="all_tasks">All</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" id="all_active_tasks">Active</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" id="all_completed_tasks">Completed</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+  </div>
+  
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+  <p style="font-size:10px" class="text-center">Double-click to edit</p>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
   </body>
 </html>
